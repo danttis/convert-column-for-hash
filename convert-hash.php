@@ -17,7 +17,7 @@ catch(Exception $ex)
 }
 
 foreach ($results as $output) {
-	$new = crc32($output["senha"]); // adicionar criptografia de sua escolha a senha
+	$new = crc32($output["senha"]); // adicionar o hash de sua escolha a senha
 	$id = $output["id"]; // receber id do usuario
 	$upsdt = "update ms_usuario set senha = '$new' where id = '$id'"; // receber comando sql
 	/// preparação para update
